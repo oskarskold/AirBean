@@ -12,8 +12,17 @@ export default new Vuex.Store({
       name: "",
       email: "",
     },
+    counter: 0,
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    setCounter(state) {
+      state.counter++;
+    },
+  },
+  actions: {
+    addToCart(context) {
+      context.commit("setCounter");
+    },
+  },
   modules: {},
 });
