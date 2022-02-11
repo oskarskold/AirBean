@@ -75,7 +75,7 @@ h1 {
   padding: 10px;
   border-radius: 50%;
   border: none;
-  background-color: white;
+  background-color: pink;
   position: absolute;
   top: 80px;
   left: 30px;
