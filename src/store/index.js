@@ -13,15 +13,19 @@ export default new Vuex.Store({
       email: "",
     },
     counter: 0,
+    orderList: [],
   },
   mutations: {
-    setCounter(state) {
-      state.counter++;
+    addToList(state, order) {
+      state.orderList.push(order);
+      state.counter = state.orderList.length
+      console.log(state.orderList);
+
     },
   },
   actions: {
-    addToCart(context) {
-      context.commit("setCounter");
+    addOrder(context, order) {
+      context.commit("addToList", order);
     },
   },
   modules: {},

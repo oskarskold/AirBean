@@ -20,7 +20,7 @@
 
     <h1>Meny</h1>
     <div class="container-menu">
-      <ul v-for="m in menu" :key="m.id">
+      <ul v-for="order in menu" :key="order.id">
         <div class="wrapper-menu">
           <div class="title">
             <div>
@@ -29,13 +29,14 @@
                 src="../assets/graphics/add.svg"
                 width="20"
                 alt="add icon"
-                @click="addToCart"
+                @click="$store.dispatch('addOrder', order)"
               />
-              <li class="title-text">{{ m.title }}</li>
+
+              <li>{{ order.title }}</li>
             </div>
-            <li class="desc">{{ m.desc }}</li>
+            <li>{{ order.desc }}</li>
           </div>
-          <p class="price">{{ m.price }}kr</p>
+          <p>{{ order.price }}kr</p>
         </div>
       </ul>
     </div>
@@ -45,11 +46,7 @@
 <script>
 export default {
   name: "Home",
-  methods: {
-    addToCart() {
-      this.$store.dispatch("addToCart");
-    },
-  },
+  methods: {},
   computed: {
     menu() {
       return this.$store.state.menu.menu;
