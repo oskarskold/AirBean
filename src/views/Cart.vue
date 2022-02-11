@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>This is an cart page</h1>
+  <div class="cart-wrapper">
+    <h1>Din beställning</h1>
   </div>
 </template>
 
