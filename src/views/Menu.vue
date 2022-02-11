@@ -31,6 +31,7 @@
                 alt="add icon"
                 @click="$store.dispatch('addOrder', order)"
               />
+
               <li>{{ order.title }}</li>
             </div>
             <li>{{ order.desc }}</li>
@@ -58,6 +59,8 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 .home {
   background: #f3e4e1;
 }
@@ -66,14 +69,15 @@ header img {
 }
 h1 {
   color: #2f2926;
+  font-family: "PT Serif", serif;
 }
 .menu-btn {
   padding: 10px;
   border-radius: 50%;
   border: none;
-  background-color: pink;
+  background-color: white;
   position: absolute;
-  top: 80px;
+  top: 40px;
   left: 30px;
 }
 .bag-btn {
@@ -82,7 +86,7 @@ h1 {
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 80px;
+  top: 40px;
 }
 .cart {
   display: flex;
@@ -97,7 +101,7 @@ h1 {
   font-size: 1rem;
   font-weight: 700;
   position: absolute;
-  top: 70px;
+  top: 30px;
 }
 li {
   color: #2f2926;
@@ -105,10 +109,24 @@ li {
   font-weight: 700;
   font-size: 0.7rem;
 }
+.price {
+  font-family: "PT Serif", serif;
+}
+.desc {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  padding-left: 2rem;
+}
+.title-text {
+  font-family: "PT Serif", serif;
+  font-size: 1.5rem;
+  margin: 0 0.4rem;
+}
+
 p {
   color: #2f2926;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 ul {
@@ -127,8 +145,7 @@ ul {
 .title div {
   display: flex;
 }
-.title div li {
-  font-size: 1rem;
+.title > div > li {
   font-weight: 600;
 }
 .container-menu {

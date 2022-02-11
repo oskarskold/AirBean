@@ -1,15 +1,14 @@
 <template>
   <div id="app">
-    <div class="nav">
-      <router-link to="/nav"
-        ><img src="@/assets/graphics/close.svg" alt="close" width="18px"
-      /></router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -17,6 +16,8 @@
   text-align: center;
   color: #2c3e50;
   max-width: 500px;
+  margin: 0;
+  padding: 0;
 }
 
 #nav {
