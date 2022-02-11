@@ -56,6 +56,7 @@ h1,
 p {
   color: #2f2926;
 }
+
 h1 {
   margin: 0;
 }

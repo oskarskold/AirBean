@@ -80,7 +80,7 @@ h1 {
   border: none;
   background-color: white;
   position: absolute;
-  top: 80px;
+  top: 40px;
   left: 30px;
 }
 .bag-btn {
@@ -89,7 +89,7 @@ h1 {
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 80px;
+  top: 40px;
 }
 .cart {
   display: flex;
@@ -104,7 +104,7 @@ h1 {
   font-size: 1rem;
   font-weight: 700;
   position: absolute;
-  top: 70px;
+  top: 30px;
 }
 li {
   color: #2f2926;

@@ -74,7 +74,7 @@ h4 {
   border: none;
   background-color: white;
   position: absolute;
-  top: 80px;
+  top: 40px;
   left: 30px;
 }
 
