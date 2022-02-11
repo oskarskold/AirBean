@@ -17,14 +17,14 @@ export default new Vuex.Store({
   mutations: {
     addToList(state, order) {
       state.orderList.push(order);
-      state.counter = state.orderList.length;
-      // console.log(state.orderList);
+      // state.counter = order.amount;
+      console.log(state.orderList);
     },
   },
   getters: {
     setTotal(state) {
       let total = 0;
-      for (var order in state.orderList) {
+      for (let order in state.orderList) {
         console.log(order);
         total += order.price
       }
@@ -33,7 +33,14 @@ export default new Vuex.Store({
   },
   actions: {
     addOrder(context, order) {
-      context.commit("addToList", order);
+      if(context.state.orderList.includes(order)){
+        order.amount++
+        context.state.counter += order.amount;
+
+      }else{
+        context.commit("addToList", order);
+
+      }
     },
   },
   modules: {},
