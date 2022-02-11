@@ -9,10 +9,11 @@
           <img src="../assets/graphics/navicon.svg" width="20" />
         </button>
       </router-link>
-
-      <button class="bag-btn">
-        <img src="../assets/graphics/bag.svg" width="15" />
-      </button>
+      <router-link to="/cart">
+        <button class="bag-btn">
+          <img src="../assets/graphics/bag.svg" width="15" />
+        </button>
+      </router-link>
       <button class="counter-btn">
         {{ showCounter }}
       </button>
@@ -86,7 +87,8 @@ h1 {
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 40px;
+  top: 20px;
+  right: 5px;
 }
 .cart {
   display: flex;
@@ -101,7 +103,8 @@ h1 {
   font-size: 1rem;
   font-weight: 700;
   position: absolute;
-  top: 30px;
+  top: 10px;
+  right: 5px;
 }
 li {
   color: #2f2926;
