@@ -26,20 +26,18 @@ export default new Vuex.Store({
       let total = 0;
       for (let order in state.orderList) {
         console.log(order);
-        total += order.price
+        total += order.price;
       }
       return total;
     },
   },
   actions: {
     addOrder(context, order) {
-      if(context.state.orderList.includes(order)){
-        order.amount++
+      if (context.state.orderList.includes(order)) {
+        order.amount++;
         context.state.counter += order.amount;
-
-      }else{
+      } else {
         context.commit("addToList", order);
-
       }
     },
   },
