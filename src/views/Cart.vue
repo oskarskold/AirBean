@@ -6,6 +6,7 @@
         <li>{{ order.title }}</li>
         <li>{{ order.price }} kr</li>
       </ul>
+
       <p>{{ Total }}</p>
     </main>
   </div>
