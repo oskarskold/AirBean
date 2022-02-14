@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>This is an status page</h1>
+    <h1>Status</h1>
   </div>
 </template>
 
