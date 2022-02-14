@@ -24,9 +24,9 @@ export default new Vuex.Store({
   getters: {
     setTotal(state) {
       let total = 0;
-      for (let order in state.orderList) {
+      for (let order of state.orderList) {
         console.log(order);
-        total += order.price;
+        total += order.price * order.amount;
       }
       return total;
     },
