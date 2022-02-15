@@ -18,14 +18,12 @@ export default new Vuex.Store({
     addToList(state, order) {
       state.orderList.push(order);
       // state.counter = order.amount;
-      console.log(state.orderList);
     },
   },
   getters: {
     setTotal(state) {
       let total = 0;
       for (let order of state.orderList) {
-        console.log(order);
         total += order.price * order.amount;
       }
       return total;
@@ -35,6 +33,14 @@ export default new Vuex.Store({
     addOrder(context, order) {
       if (context.state.orderList.includes(order)) {
         order.amount++;
+        context.state.counter += order.amount;
+      } else {
+        context.commit("addToList", order);
+      }
+    },
+    decOrder(context, order) {
+      if (context.state.orderList.includes(order)) {
+        order.amount--;
         context.state.counter += order.amount;
       } else {
         context.commit("addToList", order);

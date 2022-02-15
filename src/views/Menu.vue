@@ -71,6 +71,7 @@ header img {
 h1 {
   color: #2f2926;
   font-family: "PT Serif", serif;
+  text-align: center;
 }
 .menu-btn {
   padding: 10px;
